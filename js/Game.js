@@ -33,7 +33,7 @@ OregonH.Game.init = function init() {
   this.caravan.init({
     day: 0,
     distance: 0,
-    crew: 30,
+    crew: 25,
     food: 80,
     oxen: 2,
     money: 300,
@@ -97,7 +97,9 @@ OregonH.Game.updateGame = function updateGame() {
 
   // game over no food
   if (this.caravan.food === 0) {
-    this.ui.notify('Your caravan starved to death', 'negative');
+    this.ui.notify('Your crew and the doctor ran out of food!', 'negative');
+    alert('Your crew and the doctor ran out of food!');
+    document.location.reload();
     this.gameActive = false;
     return;
   }
@@ -114,15 +116,19 @@ OregonH.Game.updateGame = function updateGame() {
   // check if everyone died
   if (this.caravan.crew <= 0) {
     this.caravan.crew = 0;
-    this.ui.notify('Everyone died', 'negative');
+    this.ui.notify('Everyones Dead', 'negative');
+    alert('Everyones Dead!');
+    document.location.reload();
     this.gameActive = false;
     return;
   }
 
   // check win game
   if (this.caravan.distance >= OregonH.FINAL_DISTANCE) {
-    this.ui.notify('You have returned home!', 'positive');
+    this.ui.notify('You made it to Gallifrey', 'positive');
     this.gameActive = false;
+    alert('You made it to Gallifrey');
+    document.location.reload();
     return;
   }
 

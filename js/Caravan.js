@@ -38,7 +38,7 @@ OregonH.Game.init = function init() {
   this.caravan.init({
     day: 0,
     distance: 0,
-    crew: 30,
+    crew: 25,
     food: 80,
     oxen: 2,
     money: 300,

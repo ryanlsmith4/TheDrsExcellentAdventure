@@ -18,7 +18,7 @@ OregonH.Event.eventTypes = [
     notification: 'negative',
     stat: 'crew',
     value: -3,
-    text: 'Rose Tyler Gets Pissed: ',
+    text: 'Rose Tyler Gets Pissed Lose some crew: ',
   },
   {
     type: 'STAT-CHANGE',
